@@ -22,3 +22,15 @@ We need to provide Google Analytic like services to our customers. Please provid
 3. Provide metrics to customers with at most one hour delay.
 4. Run with minimum downtime.
 5. Have the ability to reprocess historical data in case of bugs in the processing logic.
+
+### Design Solution
+
+It is important to design application with speed and scalability in mind. While we are implementing the  
+application, we should consider important factors such as a lot of processing power, memory, disk space, and redundancy.
+It should distribute the load across the several machines for high throghput.
+
+1. We should have proper load balancing mechanism to handle the high volume writes.
+2. services based on microservice architecture for horizontal scalability
+3. high performance, fault-tolerant distributed streaming platform for asynchronous processing  - Kafka.
+4. We can use NoSQL databases for scalability and high performance.
+5. Grafana or Knowi or Kibana can be used for historical data representation
